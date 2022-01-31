@@ -98,5 +98,5 @@
 @endsection
 
 @section('content')
-Home Page
+<div class="wrapper">Home Page</div>
 @endsection

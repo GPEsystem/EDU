@@ -7,14 +7,17 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(Request $request){
-        return view('pages.login');
+        $title="Login Page";
+        return view('pages.login')->with('title',$title);
     }
 
     public function login(Request $request){
-        return route().redirect("pages.dashboard");
+        return redirect("/home");
     }
 
     public function home(Request $request){
-        return view('pages.dashboard');
+        $title="Dashboard Page";
+        //return view('pages.dashboard'),compact('title')); //or
+        return view('pages.dashboard')->with('title',$title);
     }
 }
