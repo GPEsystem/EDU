@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[PagesController::class,'index']);
+Route::post('/login',[PagesController::class,'login']);
 Route::get('/home',[PagesController::class,'home']);
 

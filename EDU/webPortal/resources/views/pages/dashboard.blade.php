@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.default')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{config('app.name','EDU')}}</title>
-
-    <style link="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></style>
-    <script link="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <style link="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></style>
-
+@section('header')
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -106,12 +95,8 @@
 
 
     </style>
-</head>
+@endsection
 
-<body>
-    <div class="wrapper">
-            Home Page
-    </div>
-</body>
-
-</html>
+@section('content')
+Home Page
+@endsection
