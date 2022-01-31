@@ -12,6 +12,7 @@ class PagesController extends Controller
     }
 
     public function login(Request $request){
+        //return $request->input();
         return redirect("/home");
     }
 
