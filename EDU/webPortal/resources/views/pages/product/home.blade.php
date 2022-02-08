@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="/supplier/create" class="btn btn-primary">Add Supplier</a>
+    <a href="/product/create" class="btn btn-primary">Add Supplier</a>
     <table class="table">
         <thead>
             <tr>
