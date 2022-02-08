@@ -44,6 +44,7 @@
                     </li>
                 </ul>
             </div>
+            <a class="navbar-brand" href="/">Logout</a>
         </div>
     </nav>
     <div class="container">

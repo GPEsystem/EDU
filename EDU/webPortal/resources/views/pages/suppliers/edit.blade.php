@@ -1,13 +1,21 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="wrapper">
-    <div class="text-center mt-4 name"> Add New Supplier </div>
-    <form class="p-3 mt-3" method="POST" action="/supplier/create">
+<div class="row">
+    <form method="POST" action="/supplier/edit">
         @csrf
-        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder="Username"> </div>
-        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="Password"> </div> <button class="btn mt-3">Login</button>
+        <input type="hidden" value="{{$Supplier->id}}" class="form-control" id="id" name="id" aria-describedby="emailHelp">
+        <div class="mb-3">
+            <label for="SupplierName" class="form-label">Supplier Name</label>
+            <input type="text" value="{{$Supplier->Name}}" class="form-control" name="Name" id="SupplierName" aria-describedby="emailHelp">
+            <div id="SupplierNameHelp" class="form-text">Please Provide the Supplier Name</div>
+        </div>
+        <div class="mb-3">
+            <label for="Address" class="form-label">Address</label>
+            <input type="text" class="form-control" name="Address" id="Address" value="{{$Supplier->Address}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/supplier/home" class="btn btn-secondary">Cancel</a>
     </form>
-    <div class="text-center fs-6"> <a href="#">Forget password?</a> or <a href="#">Sign up</a> </div>
 </div>
 @endsection

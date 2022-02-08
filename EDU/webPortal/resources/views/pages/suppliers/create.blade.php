@@ -4,20 +4,18 @@
 
     <div class="row">
         <form method="POST" action="/supplier/create">
+            @csrf
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="SupplierName" class="form-label">Supplier Name</label>
+                <input type="text" class="form-control" name="Name" id="SupplierName" aria-describedby="emailHelp">
+                <div id="SupplierNameHelp" class="form-text">Please Provide the Supplier Name</div>
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="Address" class="form-label">Address</label>
+                <input type="text" class="form-control" name="Address" id="Address">
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="/supplier/home" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
 
