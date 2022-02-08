@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplyAdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,13 @@ Route::get('/supplier/create',[SupplyAdminController::class,'create']);
 Route::post('/supplier/create',[SupplyAdminController::class,'createPost']);
 Route::get('/supplier/edit',[SupplyAdminController::class,'edit']);
 Route::post('/supplier/edit',[SupplyAdminController::class,'editPost']);
+
+Route::get('/product',[ProductController::class,'home']);
+Route::get('/product/home',[ProductController::class,'home']);
+Route::get('/product/create',[ProductController::class,'create']);
+Route::post('/product/create',[ProductController::class,'createPost']);
+Route::get('/product/edit',[ProductController::class,'edit']);
+Route::post('/product/edit',[ProductController::class,'editPost']);
 
 Route::get('/about', function(){
     return '<h1>About Page</h1>';
